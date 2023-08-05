@@ -1,0 +1,15 @@
+node_modules/
+# IDE
+.idea/
+.vscode/
+.Ds_store
+# Test
+coverage/
+# Build
+dist/
+build/
+# Enviroment
+.env
+.env.*
+# Yarn
+yanr-error.log
