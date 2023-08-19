@@ -1,0 +1,14 @@
+.vjs-ambilight--canvas {
+	width: 100%;
+	height: 100%;
+}
+
+.vjs-ambilight--canvas #ambilight {
+	filter: blur(80px) opacity(1) saturate(300%);
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	/* transform: scale(1.1) translateZ(0); */
+	z-index: -1;
+}
