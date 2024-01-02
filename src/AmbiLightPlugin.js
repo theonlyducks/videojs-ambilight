@@ -10,7 +10,7 @@ const Plugin = videojs.getPlugin('plugin');
 class AmbiLightPlugin extends Plugin {
 
 	constructor(player, options = {}) {
-		super(player, options);
+		super(player);
 		if (!options.fps) {
 			options.fps = 15;
 		}
@@ -49,6 +49,7 @@ class AmbiLightPlugin extends Plugin {
 		context.drawImage(video, 0, 0, canvas.width, canvas.height);
 	}
 
+	handleStateChanged(event ) { }
 }
 
 AmbiLightPlugin.defaultState = {};

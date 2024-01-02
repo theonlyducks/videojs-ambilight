@@ -3,24 +3,77 @@
 	"title": "Video.js AmbiLight",
 	"version": "1.0.0",
 	"private": false,
-	"description": "",
+	"description": "Simple plugin to ambilight in video.js player",
 	"author": "Giovane Santos <giovanesantos1999@gmail.com>",
 	"license": "MIT",
-	"main": "index.js",
+	"main": "./dist/videojs-ambilight.cjs.js",
+	"module": "./dist/videojs-ambilight.es.js",
+	"browser": "./dist/videojs-ambilight.js",
+	"exports": {
+		".": {
+			"import": "./dist/videojs-ambilight.es.js",
+			"require": "./dist/videojs-ambilight.cjs.js"
+		},
+		"./styles": {
+			"import": "./dist/videojs-ambilight.css",
+			"require": "./dist/videojs-ambilight.css"
+		}
+	},
 	"scripts": {
+		"build": "yarn clean && yarn build:js && yarn build:css",
+		"build:js": "rollup -c",
+		"build:css" : "mv dist/plugin.css dist/videojs-ambilight.css",
 		"clean": "rm -rf ./dist",
 		"start": "webpack serve --progress"
 	},
+	"engines": {
+		"node": ">=18.0"
+	},
+	"repository": {
+		"type": "",
+		"url": ""
+	},
+	"bugs": {
+		"email": "theonlyducks.official@gmail.com",
+		"url": ""
+	},
+	"files": [
+		"dist",
+		"LICENSE",
+		"README.md"
+	],
+	"keywords": [
+		"videojs",
+		"video.js",
+		"ambilight",
+		"video-ambilight",
+		"videojs-ambilight",
+		"videojs-plugin",
+		"videojs-ambilight-plugin"
+	],
+	"browserslist": [
+		"defaults"
+	],
+	"peerDependencies": {
+		"video.js": ">= ^7"
+	},
 	"devDependencies": {
-		"@babel/cli": "^7.22.9",
-		"@babel/core": "^7.22.9",
-		"@babel/preset-env": "^7.22.9",
+		"@babel/cli": "^7.23.4",
+		"@babel/core": "^7.23.7",
+		"@babel/preset-env": "^7.23.7",
+		"@rollup/plugin-babel": "^6.0.4",
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-json": "^6.1.0",
+		"@rollup/plugin-node-resolve": "^15.2.3",
 		"babel-loader": "^9.1.3",
 		"css-loader": "^6.8.1",
-		"html-webpack-plugin": "^5.5.3",
+		"html-webpack-plugin": "^5.6.0",
+		"rollup": "^3.29.4",
+		"rollup-plugin-copy": "^3.5.0",
+		"rollup-plugin-terser": "^7.0.2",
 		"style-loader": "^3.3.3",
-		"video.js": "^8.3.0",
-		"webpack": "^5.88.2",
+		"video.js": "^8.6.1",
+		"webpack": "^5.89.0",
 		"webpack-cli": "^5.1.4",
 		"webpack-dev-server": "^4.15.1"
 	}
