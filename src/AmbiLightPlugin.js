@@ -7,22 +7,27 @@ const { version: VERSION } = packageJson;
 
 const Plugin = videojs.getPlugin('plugin');
 
+const DEFAULT_OPTIONS = {
+	fps: 15,
+	scale: 1,
+	blur: 80,
+	opacity: 1,
+	saturate: 300
+}
+
 class AmbiLightPlugin extends Plugin {
 
 	constructor(player, options = {}) {
 		super(player);
-		if (!options.fps) {
-			options.fps = 15;
-		}
 		this.player = player;
 		this.options = options;
 		this.intervalId = null;
 		videojs.log('AmbiLight plugin start ', options);
-		player.on('playing', () => {
-			const ambiLightCanvas = player.getChild('AmbiLightCanvas');
-			if (!ambiLightCanvas) {
-				player.addChild('AmbiLightCanvas', { plugin: this });
-			}
+		player.on('loadeddata', () => {
+			player.addChild('AmbiLightCanvas', { plugin: this, state: this.state });
+			this.drawFrame();
+		});
+		player.on('play', () => {
 			this.startAmbilight();
 		});
 		player.on('pause', () => {
