@@ -42,7 +42,6 @@ class AmbiLightPlugin extends Plugin {
 	}
 
 	drawFrame() {
-		console.log('draw');
 		const [ video ] = this.player.children();
 		const canvas = document.getElementById('ambilight');
 		const context = canvas.getContext('2d');

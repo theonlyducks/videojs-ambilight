@@ -3,7 +3,7 @@
 	"title": "Video.js AmbiLight",
 	"version": "1.0.0",
 	"private": false,
-	"description": "Simple plugin to ambilight in video.js player",
+	"description": "Simple plugin ambilight effect in video.js player",
 	"author": "Giovane Santos <giovanesantos1999@gmail.com>",
 	"license": "MIT",
 	"main": "./dist/videojs-ambilight.cjs.js",

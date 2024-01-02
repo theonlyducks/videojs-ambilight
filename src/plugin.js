@@ -1,1 +1,1 @@
-import './AmbiLigthPlugin';
+import './AmbiLightPlugin';

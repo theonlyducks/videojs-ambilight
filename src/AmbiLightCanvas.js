@@ -20,4 +20,10 @@ export class AmbiLightCanvas extends Component {
 		return canvas;
 	}
 
+	buildCSSClass() {
+		return "";
+	}
+
+	handleLanguagechange() { }
+
 }
