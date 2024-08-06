@@ -1,7 +1,7 @@
 {
 	"name": "@theonlyducks/videojs-ambilight",
 	"title": "Video.js AmbiLight",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"private": false,
 	"description": "Simple plugin ambilight effect in video.js player",
 	"author": "Giovane Santos <giovanesantos1999@gmail.com>",
@@ -40,7 +40,8 @@
 	"files": [
 		"dist",
 		"LICENSE",
-		"README.md"
+		"README.md",
+		"preview.png"
 	],
 	"keywords": [
 		"videojs",
