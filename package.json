@@ -22,7 +22,7 @@
 	"scripts": {
 		"build": "yarn clean && yarn build:js && yarn build:css",
 		"build:js": "rollup -c",
-		"build:css" : "mv dist/plugin.css dist/videojs-ambilight.css",
+		"build:css": "mv dist/plugin.css dist/videojs-ambilight.css",
 		"clean": "rm -rf ./dist",
 		"start": "webpack serve --progress"
 	},
@@ -30,12 +30,12 @@
 		"node": ">=18.0"
 	},
 	"repository": {
-		"type": "",
-		"url": ""
+		"type": "git",
+		"url": "git+https://github.com/theonlyducks/videojs-ambilight.git"
 	},
 	"bugs": {
 		"email": "theonlyducks.official@gmail.com",
-		"url": ""
+		"url": "https://github.com/theonlyducks/videojs-ambilight/issues"
 	},
 	"files": [
 		"dist",
@@ -55,7 +55,7 @@
 		"defaults"
 	],
 	"peerDependencies": {
-		"video.js": ">= ^7"
+		"video.js": ">= ^7 || >= 8ˆ"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.23.4",

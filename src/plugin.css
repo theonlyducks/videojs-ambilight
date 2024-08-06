@@ -9,6 +9,6 @@
 	z-index: -1;
 	position: absolute;
 	pointer-events: none;
-	transform: scale(1.1) translateZ(0);
+	/*transform: scale(1.1) translateZ(0);*/
 	/*filter: blur(80px) opacity(1) saturate(300%);*/
 }

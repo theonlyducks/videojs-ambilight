@@ -8,5 +8,6 @@ window.onload = () => {
 	const video = videojs('my-video');
 	video.ambiLightPlugin({
 		fps: 120,
+		blur: 40
 	});
 }
