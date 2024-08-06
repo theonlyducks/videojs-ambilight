@@ -8,7 +8,7 @@ const { version: VERSION } = packageJson;
 const Plugin = videojs.getPlugin('plugin');
 
 const DEFAULT_OPTIONS = {
-	fps: 20,
+	fps: 15,
 	blur: 50,
 	scale: 1,
 	opacity: 1,
@@ -42,7 +42,7 @@ class AmbiLightPlugin extends Plugin {
 	_validateOptions() {
 		this.options.fps = Math.max(15, Math.min(120, this.options.fps));
 		this.options.blur = Math.max(10, Math.min(100, this.options.blur));
-		this.options.scale = Math.max(1, Math.min(2, this.options.scale));
+		this.options.scale = Math.max(1, Math.min(1.9, this.options.scale));
 		this.options.opacity = Math.max(0, Math.min(1, this.options.opacity));
 	}
 

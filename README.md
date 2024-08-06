@@ -14,24 +14,17 @@
 
 ## Documentation
 
-See
-
 ## Getting started
 
 ### Requirements
 
-```shell
-yarn add video.js
-```
+- With npm `npm install video.js`
+- With yarn `yarn add video.js`
 
 ### Installation
 
-```shell
-npm install @theonlyducks/videojs-ambilight@latest
-```
-```shell
- yarn add @theonlyducks/videojs-ambilight@latest
-```
+- With npm `npm install @theonlyducks/videojs-ambilight@latest`
+- With yarn `yarn add @theonlyducks/videojs-ambilight@latest`
 
 ### Usage
 
@@ -53,16 +46,26 @@ Example:
 ```js
 video.ambiLightPlugin({
 	fps: 60,
-	blur: 60,
-	opacity: 0.9,
+	blur: 80,
+	scale: 1.1,
+	opacity: .9,
 	saturate: 200
 });
 ```
 
 - `fps` frames per second to change the border color. default `15`
-- `blur` px amount of edge blur. default `80`
+  - min: 15 
+  - max: 120
+- `blur` px amount of edge blur. default `50`
+  - min: 10
+  - max: 100
+- `scale` image scale size. default `1`
+  - min: 1
+  - max: 1.9
 - `opacity` amount that will be visible from the edge. default `1`
-- `saturate` quantity in percentage of how much saturation the edge will have. default `300`
+  - min: 0
+  - max: 1
+- `saturate` quantity in percentage of how much saturation the edge will have. default `200`
 
 ## Development
 
